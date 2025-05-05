@@ -1,0 +1,137 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar p-4">
+        <div class="text-center mb-4">
+          <div class="mb-2">
+            <img src="img/avatar.jpg" alt="Admin" class="rounded-circle" width="60" />
+          </div>
+          <strong>Administrator Name</strong>
+          <p class="small">
+            <span class="text-muted"> admin@gmail.com </span> <br>
+            <a class="text-decoration-none" href="admin-profile.html">View Profile</a>
+          </p>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link active" href="dashboard.html"><i
+                class="fa-solid fa-chart-pie"></i>Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="user-registration.html"><i
+                class="fa-solid fa-user"></i>User</a></li>
+          <li class="nav-item"><a class="nav-link" href="plan-management.html"><i
+                class="fa-solid fa-calendar-check"></i>Plan</a></li>
+          <li class="nav-item"><a class="nav-link " href="cash-payment.html"><i
+                class="fa-solid fa-credit-card"></i>Payment</a></li>
+          <!-- Sidebar Dropdown for Report -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-book-open"></i> Report
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="reportDropdown">
+              <li><a class="dropdown-item" href="members.html"><i class="fa-solid fa-users"></i>Members</a></li>
+              <li><a class="dropdown-item " href="sales.html"> <i class="fa-solid fa-book-open"></i>Sales</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <div class="mt-4">
+          <a href="index.html" class="text-danger text-decoration-none"><i
+              class="logout fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3>Welcome Admin</h3>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <div class="card-custom p-3">
+              <p class="mb-1">User dashboard with some placeholder data and brief welcome message including full name or
+                relevant status</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-custom text-center p-3">
+              <h6>Active Users</h6>
+              <div style="font-size: 2rem; color: #867c57;">133</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-custom text-center p-3">
+              <h6>Sales</h6>
+              <div style="font-size: 2rem; color: #867c57;">84%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-custom p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>Active Members</h5>
+            <div>
+              <input type="text" class="form-control d-inline w-auto me-2" placeholder="Search">
+              <select class="form-select d-inline w-auto">
+                <option>Sort by</option>
+                <option>Name</option>
+                <option>Status</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date Paid</th>
+                <th>Date Expiry</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>James Madalla</td>
+                <td>04/01/2025</td>
+                <td>05/01/2025</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>Kent Charri Mabutas</td>
+                <td>04/02/2025</td>
+                <td>05/02/2025</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>John Elmer Rodrigo</td>
+                <td>04/03/2025</td>
+                <td>05/03/2025</td>
+                <td>Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
